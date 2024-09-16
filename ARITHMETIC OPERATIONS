@@ -1,0 +1,149 @@
+package ArithemeticOperation;
+import java.util.*;
+import java.io.*;
+interface TestInterface
+{
+  abstract  void calculate();
+
+
+}
+
+public class Addition implements TestInterface
+{
+  int C,b;
+public  void calculate()
+  {
+  Scanner sc = new Scanner(System.in);
+
+    System.out.println ("Enter the 1st num:");
+    C = sc.nextInt();
+    System.out.println ("Enter the 2nd num:");
+    b = sc.nextInt();
+    int a=C+b;
+    System.out.println ("Sum is "+a +"");
+  }
+
+
+}
+package ArithemeticOperation;
+import java.util.*;
+import java.io.*;
+
+
+public class Division implements TestInterface
+{
+  int C,b;
+public  void calculate()
+  {
+  Scanner sc = new Scanner(System.in);
+
+    System.out.println ("Enter the 1st num:");
+    C = sc.nextInt();
+    System.out.println ("Enter the 2nd num:");
+    b = sc.nextInt();
+    int a=C/b;
+    System.out.println ("quotient is "+a +"");
+  }
+
+
+}
+
+package ArithemeticOperation;
+import java.util.*;
+import java.io.*;
+
+
+public class Multiplication implements TestInterface
+{
+  int C,b;
+public  void calculate()
+  {
+  Scanner sc = new Scanner(System.in);
+
+    System.out.println ("Enter the 1st num:");
+    C = sc.nextInt();
+    System.out.println ("Enter the 2nd num:");
+    b = sc.nextInt();
+    int a=C*b;
+    System.out.println ("product is "+a +"");
+  }
+
+
+}
+
+package ArithemeticOperation;
+import java.util.*;
+import java.io.*;
+
+
+public class Substraction implements TestInterface
+{
+  int C,b;
+public  void calculate()
+  {
+  Scanner sc = new Scanner(System.in);
+
+    System.out.println ("Enter the 1st num:");
+    C = sc.nextInt();
+    System.out.println ("Enter the 2nd num:");
+    b = sc.nextInt();
+    int a=C-b;
+    System.out.println ("difference is "+a +"");
+  }
+
+
+}
+
+import ArithemeticOperation.Addition;
+import ArithemeticOperation.Substraction;
+import ArithemeticOperation.Multiplication;
+import ArithemeticOperation.Division;
+
+import java.util.*;
+import java.io.*;
+public class ArithemeticOperationMain
+{
+    public static void main(String[] args)
+    {
+      int k;
+
+        Addition a = new Addition();
+          Substraction s = new Substraction();
+            Multiplication m = new Multiplication();
+              Division d = new Division();
+          do
+          {
+            System.out.println("Enter your choice");
+            System.out.println("1.Addition ");
+         System.out.println("2.Substraction ");
+          System.out.println("3.Multiplication");
+         System.out.println("4.Division");
+          Scanner sc = new Scanner(System.in);
+k=sc.nextInt();
+
+          switch(k)
+          {
+            case 1:
+                   a.calculate();
+                   break;
+                   case 2:
+                          s.calculate();
+                          break;
+
+
+
+                          case 3:
+                                 m.calculate();
+                                 break;
+                                 case 4:
+                                        d.calculate();
+                                        break;
+
+                                        default: System.out.println("WRONG CHOICE");
+                                        break;
+          }}
+          while(k<=4);
+
+
+    }
+}
